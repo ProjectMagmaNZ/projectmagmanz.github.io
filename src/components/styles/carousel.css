@@ -1,0 +1,108 @@
+.carousel {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.carousel-image {
+  border-radius: 2em;
+  width: 100%;
+}
+
+.carousel-left,
+.carousel-right {
+  align-items: center;
+  background-color: var(--colour-blue);
+  display: flex;
+  justify-content: center;
+  height: 3em;
+  width: 80%;
+} 
+
+.carousel-left{
+  border-radius: 2em 2em 0 0;
+}
+
+.carousel-right {
+  border-radius: 0 0 2em 2em;
+}
+
+.carousel-caption {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  margin-top: 1em;
+  width: 100%;
+}
+
+.carousel-caption > h2 {
+  color: var(--colour-blue);
+  margin: 0;
+}
+
+.carousel-dots > button {
+  background-color: var(--colour-blue);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.5;
+  margin: 0.25em;
+  height: 0.75em;
+  width: 0.75em;
+}
+
+.carousel-dots > button.active {
+  opacity: 1;
+}
+
+.carousel-button {
+  background: none;
+  border: none;
+  color: var(--colour-tan);
+  cursor: pointer;
+  font-size: 2em;
+  padding: 0;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+@media (min-width: 740px) {
+  .carousel {
+    flex-direction: row;
+  }
+
+  .carousel-image {
+    width: 80%;
+    border-radius: 3em;
+  }
+
+  .carousel-left, .carousel-right {
+    height: calc(340px + 0.5 * (min(100vw, 1400px) - 740px));
+    width: 10%;
+  }
+
+  .carousel-left {
+    border-radius: 3em 0 0 3em;
+  }
+
+  .carousel-button {
+    font-size: 3.5em;
+  }
+
+  .carousel-right {
+    border-radius: 0 3em 3em 0;
+  }
+
+  .carousel-caption > h2 {
+    font-size: 3em;
+  }
+
+  .carousel-dots > button {
+    height: 1em;
+    width: 1em;
+  }
+}
