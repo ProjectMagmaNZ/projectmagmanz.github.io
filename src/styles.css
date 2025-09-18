@@ -55,3 +55,9 @@ svg {
   font-size: 4rem;
   font-weight: 600;
 }
+
+.blob {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
