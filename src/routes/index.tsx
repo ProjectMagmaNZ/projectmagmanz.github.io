@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
-import { instagram, linkedin, linktree } from "@/assets";
+import { blob, dots, instagram, linkedin, linktree } from "@/assets";
 import "./styles/home.css";
 import { IoArrowDown } from "react-icons/io5";
 import { Carousel } from "@/components";
@@ -13,16 +13,20 @@ export const Route = createFileRoute("/")({
 function RouteComponent() {
   const [isMobile, setMobile] = useState(window.innerWidth < 740);
   const [atTop, setAtTop] = useState(window.scrollY === 0);
+  const [scroll, setScroll] = useState(window.scrollY);
 
   useEffect(() => {
     const handleResize = () => setMobile(window.innerWidth < 740);
     window.addEventListener("resize", handleResize);
 
-    const handleScroll = () => setAtTop(window.scrollY === 0);
+    const handleTop = () => setAtTop(window.scrollY === 0);
+    const handleScroll = () => setScroll(window.scrollY);
+    window.addEventListener("scroll", handleTop);
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleTop);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -73,6 +77,34 @@ function RouteComponent() {
           className={`home-arrow${atTop ? "" : " hidden"}`}
           size={isMobile ? 32 : 48}
         />
+        <img
+          src={blob}
+          className="blob tan"
+          style={{
+            height: "100%",
+            right: 0,
+            transform: `translate(30%, 10%) rotate(${10 - 0.03 * scroll}deg)`,
+          }}
+        />
+        <img
+          src={blob}
+          className="blob orange"
+          style={{
+            height: "80%",
+            right: 0,
+            transform: `translate(50%, -10%) rotate(${150 + 0.04 * scroll}deg)`,
+          }}
+        />
+        <img
+          src={dots}
+          className="blob blue"
+          style={{
+            height: "60%",
+            bottom: 0,
+            left: 0,
+            transform: `translate(-50%, 50%) rotate(${-70 + 0.02 * scroll}deg)`,
+          }}
+        />
       </section>
       <section className="home-section">
         <div className="home-info">
@@ -90,9 +122,39 @@ function RouteComponent() {
             <button className="home-button">Join Us</button>
           </a>
         </div>
+        <img
+          src={blob}
+          className="blob blue"
+          style={{
+            height: "60%",
+            bottom: 0,
+            left: 0,
+            transform: `translate(-50%, 30%) rotate(${-10 - 0.02 * scroll}deg)`,
+          }}
+        />
+        <img
+          src={dots}
+          className="blob dark-orange"
+          style={{
+            height: "60%",
+            bottom: 0,
+            right: 0,
+            transform: `translate(50%, 30%) rotate(${-80 + 0.01 * scroll}deg)`,
+          }}
+        />
       </section>
       <section className="home-section">
         <Carousel />
+        <img
+          src={blob}
+          className="blob tan"
+          style={{
+            height: "100%",
+            top: 0,
+            left: 0,
+            transform: `translate(-30%, 0) rotate(0)`,
+          }}
+        />
       </section>
     </>
   );
