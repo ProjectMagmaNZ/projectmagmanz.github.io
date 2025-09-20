@@ -79,6 +79,7 @@ function RouteComponent() {
         />
         <img
           src={blob}
+          aria-hidden="true"
           className="blob tan"
           style={{
             height: "100%",
@@ -88,6 +89,7 @@ function RouteComponent() {
         />
         <img
           src={blob}
+          aria-hidden="true"
           className="blob orange"
           style={{
             height: "80%",
@@ -97,6 +99,7 @@ function RouteComponent() {
         />
         <img
           src={dots}
+          aria-hidden="true"
           className="blob blue"
           style={{
             height: "60%",
@@ -124,6 +127,7 @@ function RouteComponent() {
         </div>
         <img
           src={blob}
+          aria-hidden="true"
           className="blob blue"
           style={{
             height: "60%",
@@ -133,6 +137,7 @@ function RouteComponent() {
           }}
         />
         <img
+          aria-hidden="true"
           src={dots}
           className="blob dark-orange"
           style={{
@@ -146,6 +151,7 @@ function RouteComponent() {
       <section className="home-section">
         <Carousel />
         <img
+          aria-hidden="true"
           src={blob}
           className="blob tan"
           style={{

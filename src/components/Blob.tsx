@@ -38,8 +38,6 @@ export default function Blob({
         width,
         height,
         transform: `rotate(${rotation}deg) scale(${scale})`,
-        pointerEvents: "none",
-        zIndex: 0,
         ...style,
       }}
     />

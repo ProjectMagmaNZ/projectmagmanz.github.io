@@ -10,7 +10,7 @@ export default function Header() {
   const path = location.pathname;
 
   let yellow = false;
-  if (path === '/projects' || path === '/contact' || path === '/team' || path === '/about') {
+  if (path === "/projects" || path === "/about") {
     yellow = true;
   }
 
@@ -36,7 +36,11 @@ export default function Header() {
   }, [isMobile]);
 
   return (
-    <header className={`header${!atTop && !menuOpen ? " scrolled" : ""} + ${yellow ? 'header-yellow' : ''}`}>
+    <header
+      className={`header${!atTop && !menuOpen ? " scrolled" : ""} + ${
+        yellow ? "header-yellow" : ""
+      }`}
+    >
       <nav className="header-nav">
         <Link to="/">
           <img
