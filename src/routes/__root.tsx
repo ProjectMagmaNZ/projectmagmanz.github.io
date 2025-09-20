@@ -1,4 +1,5 @@
 import { Outlet, createRootRoute } from "@tanstack/react-router";
+import { MobileProvider } from "@/context/MobileContext";
 // import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 // import { TanstackDevtools } from "@tanstack/react-devtools";
 
@@ -10,7 +11,9 @@ export const Route = createRootRoute({
     <div className="container">
       <Header />
       <main className="main">
-        <Outlet />
+        <MobileProvider>
+          <Outlet />
+        </MobileProvider>
       </main>
       <Footer />
       {/* <TanstackDevtools

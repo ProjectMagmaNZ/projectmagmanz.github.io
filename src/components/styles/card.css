@@ -1,0 +1,31 @@
+.card {
+  border-radius: 16px;
+  padding: 20px;
+  background-color: var(--colour-tan);;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  object-fit: cover;
+}
+
+.card-title {
+  color: var(--colour-blue);
+  margin: 0 0 12px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.card-blurb {
+  color: var(--colour-blue);
+  font-size: 1rem;
+  margin: 0;
+  text-align: left;
+}

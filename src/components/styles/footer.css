@@ -59,3 +59,24 @@
     text-align: left;
   }
 }
+
+.to-top-button {
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: 3px solid var(--colour-dark-orange);
+  color: var(--colour-dark-orange);
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  z-index: 2000;
+}
+
+.to-top-button:hover {
+  background: var(--colour-dark-orange);
+  color: #fff;
+  outline: none;
+}

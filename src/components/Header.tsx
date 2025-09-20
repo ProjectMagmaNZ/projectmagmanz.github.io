@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { IoClose, IoMenu } from "react-icons/io5";
 
@@ -6,6 +6,14 @@ import { logoText } from "@/assets";
 import "./styles/header.css";
 
 export default function Header() {
+  const { location } = useRouterState();
+  const path = location.pathname;
+
+  let yellow = false;
+  if (path === '/projects' || path === '/contact' || path === '/team' || path === '/about') {
+    yellow = true;
+  }
+
   const [isMobile, setMobile] = useState(window.innerWidth < 740);
   const [atTop, setAtTop] = useState(window.scrollY === 0);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,7 +36,7 @@ export default function Header() {
   }, [isMobile]);
 
   return (
-    <header className={`header${!atTop && !menuOpen ? " scrolled" : ""}`}>
+    <header className={`header${!atTop && !menuOpen ? " scrolled" : ""} + ${yellow ? 'header-yellow' : ''}`}>
       <nav className="header-nav">
         <Link to="/">
           <img
