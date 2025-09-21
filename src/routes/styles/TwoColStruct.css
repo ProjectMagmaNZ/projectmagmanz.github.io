@@ -1,0 +1,16 @@
+.two-column-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.column {
+  flex: 1;
+  padding: 1rem;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+

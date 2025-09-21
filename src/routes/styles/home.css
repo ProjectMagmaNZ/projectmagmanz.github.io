@@ -47,6 +47,19 @@
   white-space: nowrap;
 }
 
+.about-project-button {
+  background-color: var(--colour-dark-orange);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  height: 40px;
+  padding: 0 15px;
+  white-space: nowrap;
+}
+
 .home-arrow {
   background-color: var(--colour-blue);
   border-radius: 50%;
