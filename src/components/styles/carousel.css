@@ -11,7 +11,7 @@
   height: 100%;
   width: 100%;
   border-radius: 2em;
-  background-color: var(--colour-light-tan);
+  background: linear-gradient(to bottom, var(--colour-light-tan) 70%, transparent 100%);
 }
 
 .carousel-image {
