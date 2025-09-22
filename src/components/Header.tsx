@@ -85,7 +85,7 @@ export default function Header() {
                     to="/projects"
                     onClick={() => setMenuOpen(false)}
                   >
-                    Projects
+                    Our Work
                   </Link>
                 </li>
                 <li>
@@ -128,7 +128,7 @@ export default function Header() {
                 className="header-a"
                 to="/projects"
               >
-                Projects
+                Our Work
               </Link>
             </li>
             <li>

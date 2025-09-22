@@ -57,7 +57,7 @@ function RouteComponent() {
         scale={2.2}
       />
 
-      <h1 className="header-container">Projects</h1>
+      <h1 className="header-container">Our Work</h1>
       <div className="semester-buttons">
         {semesters.map((sem) => (
           <button
