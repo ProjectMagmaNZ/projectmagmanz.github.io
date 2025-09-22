@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import FAQAccordion from "@/components/AccordionFAQ";
 import "./styles/about.css";
+import ToTop from "@/components/ToTop";
 
 // Generic components
 import blob1 from "@/assets/Blob1.png";
@@ -149,6 +150,15 @@ function RouteComponent() {
         </h2>
 
         <FAQAccordion />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+            paddingBottom: "40px",
+          }}
+        >
+          <ToTop />
+        </div>
       </section>
     </>
   );
