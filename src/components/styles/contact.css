@@ -21,6 +21,7 @@ textarea{
 
 .email{
     height: 2.25rem !important;
+    width: 30vw;
 }
 
 .subject{
@@ -30,7 +31,7 @@ textarea{
 
 .message{
     border-radius: 1rem;
-    height: 6rem !important;
+    height: 10rem !important;
     width: 65vw;
 }
 
@@ -42,6 +43,7 @@ textarea{
     background-color: var(--colour-dark-orange);
     color: white;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .subtext{

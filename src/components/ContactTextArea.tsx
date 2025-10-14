@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import './styles/contact.css'
 
 type Props = {
@@ -7,11 +7,16 @@ type Props = {
   placeholder?: string
   title?: string
   className?: string
+  value?: string // Add value prop
 }
 
-/* Controlled textarea that reports changes and supports submit */
-export default function ContactTextArea({ onChange, onSubmit, placeholder, title, className }: Props) {
-  const [text, setText] = useState("")
+export default function ContactTextArea({ onChange, onSubmit, placeholder, title, className, value }: Props) {
+  const [text, setText] = useState(value || "")
+
+  // Update internal state when value prop changes (for clearing)
+  useEffect(() => {
+    setText(value || "")
+  }, [value])
 
   function handleChange(e: React.ChangeEvent<HTMLTextAreaElement>) {
     setText(e.target.value)
@@ -21,22 +26,21 @@ export default function ContactTextArea({ onChange, onSubmit, placeholder, title
   function handleSubmit(e?: React.FormEvent) {
     e?.preventDefault()
     onSubmit?.(text)
-     setText("")
   }
 
   return (
     <div>
-        <div className="title-wrapper">
-        <p className="text-area-title">{title}</p></div>
-    <form className="contact-form-wrapper" onSubmit={handleSubmit}>
-      <textarea
-        className={className}
-        value={text}
-        onChange={handleChange}
-        placeholder={placeholder ?? "Write your message..."}
-      />
-      
-    </form>
+      <div className="title-wrapper">
+        <p className="text-area-title">{title}</p>
+      </div>
+      <form className="contact-form-wrapper" onSubmit={handleSubmit}>
+        <textarea
+          className={className}
+          value={text}
+          onChange={handleChange}
+          placeholder={placeholder ?? "Write your message..."}
+        />
+      </form>
     </div>
   )
 }

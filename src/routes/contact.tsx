@@ -62,9 +62,9 @@ function RouteComponent() {
         <div className="contact">Contact</div>
         <div className="us">Us</div>
         <div className="subtext"><br />Feel free to reach out as a member or a <br />client, or if you want more information.</div>
-        <ContactTextArea className="email" title="Your email" placeholder="" onChange={setFromEmail} />
-        <ContactTextArea className="subject" title="Subject" placeholder="" onChange={setSubject} />
-        <ContactTextArea className="message" title="Message" placeholder="" onChange={setBody} />
+        <ContactTextArea className="email" title="Your email" placeholder="" onChange={setFromEmail} value={fromEmail}/>
+        <ContactTextArea className="subject" title="Subject" placeholder="" onChange={setSubject} value={subject}/>
+        <ContactTextArea className="message" title="Message" placeholder="" onChange={setBody} value={body}/>
       </section>
       <div style={{ marginTop: 8 }}>
         <button className="send-button" onClick={handleSend} disabled={loading}>
