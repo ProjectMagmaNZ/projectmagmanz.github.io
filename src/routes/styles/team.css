@@ -1,0 +1,50 @@
+.exec-grid{
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 10;
+    height:auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    top: -130px;
+    position: relative;
+}
+
+.page-title {
+    color: var(--colour-dark-orange);
+    font-weight: normal;
+    font-size: 60px;
+    padding-left: 50px;
+}
+
+.first-dots{
+    z-index: 0;
+    position: absolute;
+    height: 643px;
+    left: -400px;
+    top: 300px;
+}
+
+.second-dots{
+    z-index: 0;
+    position: absolute;
+    height:989px;
+    rotate: 30deg;
+    left: 900px;
+    top: 1300px
+}
+
+.third-dots{
+    z-index: 0;
+    position: absolute;
+    height: 642px;
+    top: 2700px;
+    left: -300px;
+}
+.fourth-dots{
+    z-index: 0;
+    position: absolute;
+    height: 366px;
+    rotate: -30deg;
+    left: 1200px;
+    top: 3800px;
+}
