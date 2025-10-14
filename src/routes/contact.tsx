@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import ContactTextArea from "@/components/ContactTextArea";
 import "./styles/contact.css";
+
 
 import blob1 from "@/assets/Blob1.png";
 import blob2 from "@/assets/Blob2.png";
@@ -8,73 +11,69 @@ import Blob from "@/components/Blob";
 export const Route = createFileRoute("/contact")({
   component: RouteComponent,
 });
+const FORM_URL = "https://script.google.com/macros/s/AKfycbwFTjBElr5p8JsjqcG3WWVRf5tL0Er-sJ85i2kSW2FLNV-yrbS2JXWXnCuvnFALaINhww/exec"; 
+
 
 function RouteComponent() {
+  const [fromEmail, setFromEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [body, setBody] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  async function handleSend() {
+    if (!fromEmail || !subject || !body) {
+      alert("Please fill all fields.");
+      return;
+    }
+
+    setLoading(true);
+    console.log(fromEmail);
+    console.log(subject);
+    console.log(body);
+    try {
+      const form = new URLSearchParams();
+      form.append("email", fromEmail);
+      form.append("subject", subject);
+      form.append("message", body);
+
+      const res = await fetch(FORM_URL, {
+        method: "POST",
+        body: form,
+      });
+
+      const json = await res.json();
+      if (json.status !== "ok") throw new Error(json.message || "Send failed");
+
+      console.log("Message sent.");
+      setFromEmail("");
+      setSubject("");
+      setBody("");
+    } catch (err) {
+      console.error(err);
+      alert("Send failed. See console for details.");
+    } finally {
+      setLoading(false);
+    }
+  }
+
   return (
-    <>
-      <Blob
-        src={blob2}
-        top="15rem"
-        left="-2rem"
-        width="280px"
-        height="280px"
-        rotation={180}
-        scale={2}
-      />
-      <Blob
-        src={blob1}
-        top="35rem"
-        right="1rem"
-        width="220px"
-        height="220px"
-        rotation={180}
-        scale={2.2}
-      />
-      
-    <section className="contact-section">
-      <h3 className="contact-h3">
-        Thank you for your interest in our mission! Our programme runs twice in a year, once in <u>Semester 1</u> and once in <u>Semester 2</u>.
-      </h3>
+    <div className="contact-form-container">
+      <section id="contact-form">
+        <div className="contact">Contact</div>
+        <div className="us">Us</div>
+        <div className="subtext"><br />Feel free to reach out as a member or a <br />client, or if you want more information.</div>
+        <ContactTextArea className="email" title="Your email" placeholder="" onChange={setFromEmail} />
+        <ContactTextArea className="subject" title="Subject" placeholder="" onChange={setSubject} />
+        <ContactTextArea className="message" title="Message" placeholder="" onChange={setBody} />
+      </section>
+      <div style={{ marginTop: 8 }}>
+        <button className="send-button" onClick={handleSend} disabled={loading}>
+          {loading ? "Sending..." : "Send"}
+        </button>
 
-      <br></br>
-
-      <h3 className="contact-h3">
-        Sign ups usually officially open at the <i>very start of each semester</i>. But please use the below form to express your interest, and we will contact you when the next sign ups open:
-      </h3>
-
-      {/* <h2 className="contact-h2">Or to sign up for our mailing list:</h2> */}
-
-      <br></br>
-
-      <center>
-      <a href="https://forms.gle/wMDQGo9Ews73hzHK6">
-          <button className="contact-button">Join us via this form</button>
-      </a>
-      </center>
-
-      <br></br>
-
-      <br></br>
-
-      <br></br>
-
-      <h3 className="contact-h3">For any other queries, please send us a message at:</h3>
-      {/* <a
-        href="mailto:projectmagmanz@gmail.com"
-        className="contact-email"
-      >
-        projectmagmanz@gmail.com
-      </a> */}
-      
-      <br></br>
-
-      <center>
-      <a href="mailto:projectmagmanz@gmail.com">
-          <button className="contact-button">Our official email address</button>
-      </a>
-      </center>
-
-    </section>
-    </>
+        
+      </div>
+      <div className="join-us-wrapper"><p>Join as a member for free to access workshops, projects, and more!</p></div>
+    </div>
   );
 }
