@@ -3,10 +3,12 @@ import { useState } from "react";
 import ContactTextArea from "@/components/ContactTextArea";
 import "./styles/contact.css";
 
-
 import blob1 from "@/assets/Blob1.png";
 import blob2 from "@/assets/Blob2.png";
+import dots1 from "@/assets/Dots1.png";
+import dots2 from "@/assets/Dots2.png";
 import Blob from "@/components/Blob";
+
 
 export const Route = createFileRoute("/contact")({
   component: RouteComponent,
@@ -57,6 +59,44 @@ function RouteComponent() {
   }
 
   return (
+    <>
+    <Blob
+        src={blob2}
+        top="35rem"
+        right="-2rem"
+        width="280px"
+        height="280px"
+        rotation={180}
+        scale={2}
+      />
+      <Blob
+        src={blob1}
+        top="70rem"
+        left="2rem"
+        width="220px"
+        height="220px"
+        rotation={180}
+        scale={2.2}
+      />
+      <Blob
+        src={dots2}
+        top="70rem"
+        right="-1rem"
+        width="220px"
+        height="220px"
+        rotation={70}
+        scale={2}
+      />
+      <Blob
+        src={dots1}
+        top="40rem"
+        left="3rem"
+        width="220px"
+        height="220px"
+        rotation={180}
+        scale={2}
+      />
+    
     <div className="contact-form-container">
       <section id="contact-form">
         <div className="contact">Contact</div>
@@ -75,5 +115,6 @@ function RouteComponent() {
       </div>
       <div className="join-us-wrapper"><p>Join as a member for free to access workshops, projects, and more!</p></div>
     </div>
+    </>
   );
 }
