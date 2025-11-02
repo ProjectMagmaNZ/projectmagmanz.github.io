@@ -1,0 +1,1 @@
+import{j as o,a as t}from"./index-BJ-MINQf.js";function a(){return o.jsxs("button",{className:"to-top-button",onClick:()=>window.scrollTo({top:0,behavior:"smooth"}),"aria-label":"Back to top",children:["Back to top ",o.jsx(t,{size:21})]})}export{a as T};

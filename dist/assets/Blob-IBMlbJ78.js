@@ -1,1 +1,0 @@
-import{j as m}from"./index-1pNg5ThW.js";const x="/assets/Blob1-C3wt1XVM.png";function c({src:s,top:t,left:o,right:a,bottom:e,width:r="200px",height:n="200px",rotation:b=0,scale:l=1,style:i={}}){return m.jsx("img",{src:s,"aria-hidden":"true",className:"blob",style:{top:t,left:o,right:a,bottom:e,width:r,height:n,transform:`rotate(${b}deg) scale(${l})`,...i}})}export{c as B,x as b};

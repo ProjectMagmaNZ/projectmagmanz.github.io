@@ -79,7 +79,7 @@ export default function Header() {
                     Our Team
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     className="header-a"
                     to="/projects"
@@ -87,7 +87,7 @@ export default function Header() {
                   >
                     Our Work
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     className="header-a"
