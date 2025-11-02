@@ -123,14 +123,14 @@ export default function Header() {
                 Our Team
               </Link>
             </li>
-            <li>
+            {/* TODO: add back once page is sorted <li>
               <Link
                 className="header-a"
                 to="/projects"
               >
                 Our Work
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 className="header-a"

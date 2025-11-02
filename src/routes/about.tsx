@@ -4,6 +4,8 @@ import "./styles/about.css";
 import ToTop from "@/components/ToTop";
 
 // Generic components
+import about1 from "@/assets/about-1.jpg";
+import about2 from "@/assets/about-2.jpg";
 import blob1 from "@/assets/Blob1.png";
 import blob2 from "@/assets/Blob2.png";
 import dots1 from "@/assets/Dots1.png";
@@ -75,7 +77,7 @@ function RouteComponent() {
             </p>
           </div>
           <img
-            src="/src/assets/about-1.jpg"
+            src={about1}
             alt="About Us - Launch Workshop"
             className="about-img"
           />
@@ -118,7 +120,7 @@ function RouteComponent() {
       <section className="about-section">
         <div className="about-two-cols">
           <img
-            src="/src/assets/about-2.jpg"
+            src={about2}
             alt="About Us - Showcase Workshop"
             className="about-img"
           />
