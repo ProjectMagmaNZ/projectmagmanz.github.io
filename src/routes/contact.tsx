@@ -89,8 +89,8 @@ function RouteComponent() {
       />
       <Blob
         src={dots1}
-        top="40rem"
-        left="3rem"
+        top="20rem"
+        left="-3rem"
         width="220px"
         height="220px"
         rotation={180}

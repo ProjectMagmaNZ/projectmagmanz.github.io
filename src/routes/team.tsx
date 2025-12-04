@@ -12,8 +12,8 @@ export const Route = createFileRoute("/team")({
 
 function RouteComponent() {
   return (
-    <div>
-      <h1 className="page-title">Meet The Team</h1>
+    <div className="page-container">
+      <h1 className="header-container">Meet the Team</h1>
       <img
         className="first-dots"
         src={dots1}

@@ -33,7 +33,7 @@ const execs = [
   {
     name: "John",
     degree: "Fourth year Engineering Science, Maths",
-    role: "",
+    role: "Project Coordinator",
     imageSrc: JohnImg,
     quote:
       "\"I always get to where I'm going by walking away from where I've been.\" - Winnie the Pooh",
