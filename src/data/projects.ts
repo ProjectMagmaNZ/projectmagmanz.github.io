@@ -1,125 +1,67 @@
 import carousel1 from "../assets/carousel-1.png";
-import carousel2 from "../assets/carousel-2.jpg";
 
-const projects2025S2 = [
+export const projectPartners = [
   {
-    title: "CAAH | App For This Purpose",
-    imageSrc: carousel1,
-    blurb:
-      "An app that does something that does something that does something.",
+    name: "Company A",
+    logoSrc: carousel1,
+    link: null,
   },
   {
-    title: "BBBS | Mentor-Mentee Matching",
-    imageSrc: carousel2,
-    blurb:
-      "An app that does something that does something that does something.",
+    name: "Company B",
+    logoSrc: carousel1,
+    link: null,
   },
   {
-    title: "CAAH | Lorem Ipsum Project",
-    imageSrc: carousel2,
-    blurb:
-      "An app that does something that does something that does something.",
+    name: "Company C",
+    logoSrc: carousel1,
+    link: null,
   },
   {
-    title: "CAAH",
-    imageSrc: carousel1,
-    blurb:
-      "An app that does something that does something that does something.",
+    name: "Company D",
+    logoSrc: carousel1,
+    link: null,
   },
   {
-    title: "LightHouse Leaders | Project",
-    imageSrc: carousel2,
-    blurb:
-      "An app that does something that does something that does something.",
+    name: "Company E",
+    logoSrc: carousel1,
+    link: null,
   },
   {
-    title: "PROJECT PROJECT PROJECT",
-    imageSrc: carousel2,
-    blurb:
-      "An app that does something that does something that does something.",
+    name: "Company F",
+    logoSrc: carousel1,
+    link: null,
   },
 ];
 
-const projects2025S1 = [
+export const projectHighlights = [
   {
-    title: "CAAH | App For This Purpose",
+    title: "Company | Project Name",
     imageSrc: carousel1,
-    blurb:
-      "An app that does something that does something that does something.",
+    blurb: "Brief description.",
   },
   {
-    title: "BBBS | Mentor-Mentee Matching",
-    imageSrc: carousel2,
-    blurb:
-      "An app that does something that does something that does something.",
-  },
-  {
-    title: "CAAH | Lorem Ipsum Project",
-    imageSrc: carousel2,
-    blurb:
-      "An app that does something that does something that does something.",
-  },
-  {
-    title: "CAAH",
+    title: "Company | Project Name",
     imageSrc: carousel1,
-    blurb:
-      "An app that does something that does something that does something.",
+    blurb: "Brief description.",
   },
   {
-    title: "LightHouse Leaders | Project",
-    imageSrc: carousel2,
-    blurb:
-      "An app that does something that does something that does something.",
+    title: "Company | Project Name",
+    imageSrc: carousel1,
+    blurb: "Brief description.",
   },
   {
-    title: "PROJECT PROJECT PROJECT",
-    imageSrc: carousel2,
-    blurb:
-      "An app that does something that does something that does something.",
+    title: "Company | Project Name",
+    imageSrc: carousel1,
+    blurb: "Brief description.",
+  },
+  {
+    title: "Company | Project Name",
+    imageSrc: carousel1,
+    blurb: "Brief description.",
+  },
+  {
+    title: "Company | Project Name",
+    imageSrc: carousel1,
+    blurb: "Brief description.",
   },
 ];
-
-const projects2024S2 = [
-  {
-    title: "CAAH | App For This Purpose",
-    imageSrc: carousel1,
-    blurb:
-      "An app that does something that does something that does something.",
-  },
-  {
-    title: "BBBS | Mentor-Mentee Matching",
-    imageSrc: carousel2,
-    blurb:
-      "An app that does something that does something that does something.",
-  },
-  {
-    title: "CAAH | Lorem Ipsum Project",
-    imageSrc: carousel2,
-    blurb:
-      "An app that does something that does something that does something.",
-  },
-  {
-    title: "CAAH",
-    imageSrc: carousel1,
-    blurb:
-      "An app that does something that does something that does something.",
-  },
-  {
-    title: "LightHouse Leaders | Project",
-    imageSrc: carousel2,
-    blurb:
-      "An app that does something that does something that does something.",
-  },
-  {
-    title: "PROJECT PROJECT PROJECT",
-    imageSrc: carousel2,
-    blurb:
-      "An app that does something that does something that does something.",
-  },
-];
-
-export const allProjects = {
-  "2025 Semester 2": projects2025S2,
-  "2025 Semester 1": projects2025S1,
-  "2024 Semester 2": projects2024S2,
-};
