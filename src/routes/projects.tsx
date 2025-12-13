@@ -5,7 +5,7 @@ import blob3 from "@/assets/Blob3.png";
 import dots1 from "@/assets/Dots1.png";
 import dots2 from "@/assets/Dots2.png";
 import Blob from "@/components/Blob";
-import { projectPartners, projectHighlights } from "@/data/projects";
+import { projectPartners, projectPartners2, projectHighlights } from "@/data/projects";
 
 export const Route = createFileRoute("/projects")({
   component: RouteComponent,
@@ -53,9 +53,36 @@ function RouteComponent() {
 
       <section className="projects-section">
         <h1 className="projects-h1">
-          Over the years we've had the chance <br />
-          to work with some amazing people:
+          Over the years we've had the chance to be<br />
+          building some amazing projects with our clients:
         </h1>
+
+        <div className="projects-grid">
+          {Object.values(projectHighlights).map((highlight) => (
+            <div
+              className="project-highlight"
+              key={highlight.title}
+            >
+              <center><h2 className="project-highlight-title">{highlight.title}</h2></center>
+              <center><img
+                key={highlight.title}
+                src={highlight.imageSrc}
+                alt={highlight.title}
+                width="100%"
+                className="partner-logo"
+              /></center>
+              <p className="project-highlight-blurb">{highlight.blurb}</p>
+            </div>
+          ))}
+        </div>
+
+        <h1 className="projects-h1">
+          ...And we've had the chance to <br /> work with some amazing people:
+        </h1>
+
+        <center><p className="project-subheading-text">Some of our workshops...</p></center>
+
+        <br></br>
 
         <div className="projects-grid">
           {Object.values(projectPartners).map((partner) =>
@@ -84,27 +111,35 @@ function RouteComponent() {
           )}
         </div>
 
-        <h1 className="projects-h1">
-          ...And we've had the chance to be building <br /> some amazing projects with our clients:
-        </h1>
+        <center><p className="project-subheading-text">Example from our CAAH project in 2024...</p></center>
+
+        <br></br>
 
         <div className="projects-grid">
-          {Object.values(projectHighlights).map((highlight) => (
-            <div
-              className="project-highlight"
-              key={highlight.title}
-            >
-              <center><h2 className="project-highlight-title">{highlight.title}</h2></center>
-              <center><img
-                key={highlight.title}
-                src={highlight.imageSrc}
-                alt={highlight.title}
-                width="100%"
+          {Object.values(projectPartners2).map((partner) =>
+            partner.link ? (
+              <Link
+                to={partner.link}
+                key={partner.name}
+              >
+                <img
+                  key={partner.name}
+                  src={partner.logoSrc}
+                  alt={partner.name}
+                  height={250}
+                  className="partner-logo"
+                />
+              </Link>
+            ) : (
+              <img
+                key={partner.name}
+                src={partner.logoSrc}
+                alt={partner.name}
+                height={250}
                 className="partner-logo"
-              /></center>
-              <p className="project-highlight-blurb">{highlight.blurb}</p>
-            </div>
-          ))}
+              />
+            )
+          )}
         </div>
 
         <h1 className="projects-h1">Interested in supporting or volunteering with us?</h1>
