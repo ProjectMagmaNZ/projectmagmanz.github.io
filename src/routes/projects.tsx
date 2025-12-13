@@ -85,8 +85,7 @@ function RouteComponent() {
         </div>
 
         <h1 className="projects-h1">
-          And we've had the chance to <br />
-          build some amazing projects:
+          ...And we've had the chance to be building <br /> some amazing projects with our clients:
         </h1>
 
         <div className="projects-grid">
@@ -95,27 +94,27 @@ function RouteComponent() {
               className="project-highlight"
               key={highlight.title}
             >
-              <h2 className="project-highlight-title">{highlight.title}</h2>
-              <img
+              <center><h2 className="project-highlight-title">{highlight.title}</h2></center>
+              <center><img
                 key={highlight.title}
                 src={highlight.imageSrc}
                 alt={highlight.title}
                 width="100%"
                 className="partner-logo"
-              />
+              /></center>
               <p className="project-highlight-blurb">{highlight.blurb}</p>
             </div>
           ))}
         </div>
 
-        <h1 className="projects-h1">Interested in working with us?</h1>
+        <h1 className="projects-h1">Interested in supporting or volunteering with us?</h1>
 
         <button className="projects-cta">
           <Link
             className="projects-cta-link"
             to="/contact"
           >
-            Contact Us
+            <b>Contact Us</b>
           </Link>
         </button>
       </section>
