@@ -17,8 +17,14 @@
 
 
 
-.name{
+.name, .role{
   color: var(--colour-dark-orange);
+  font-weight: 600 !important;
+  font-size: 2.8rem !important;
+}
+
+.degree, .quote{
+  font-size: 1.5em !important;
 }
 
 .execImg {
@@ -37,7 +43,8 @@
 }
 
 .role{
-  color: var(--colour-dark-orange);
+  padding-bottom: 10px;
+  padding-top: 30px;
 }
 
 .execCard {

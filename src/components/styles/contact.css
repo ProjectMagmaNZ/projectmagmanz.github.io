@@ -1,5 +1,5 @@
 .title-wrapper p{
-    font-size: 35px;
+    font-size: 1.5em;
     color: var(--colour-dark-orange);
 }
 
@@ -73,7 +73,7 @@ textarea{
 
 .join-us-wrapper{
     padding-top: 5rem;
-    font-size: 35px;
+    font-size: 2em;
     color: var(--colour-blue);
     padding-bottom: 1rem;
 }

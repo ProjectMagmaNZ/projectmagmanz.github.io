@@ -9,6 +9,14 @@
   position: relative;
 }
 
+.page-container{
+  width: 100%;
+}
+
+.header{
+  background-color: #F4D39B;
+}
+
 .page-title {
   color: var(--colour-dark-orange);
   font-weight: normal;
@@ -16,6 +24,7 @@
   padding-left: 50px;
   font-weight: 600;
 }
+
 
 .first-dots {
   z-index: 0;
@@ -30,15 +39,15 @@
   position: absolute;
   height: 989px;
   rotate: 30deg;
-  left: 900px;
-  top: 1300px;
+  left: 1100px;
+  top: 1200px;
 }
 
 .third-dots {
   z-index: 0;
   position: absolute;
   height: 642px;
-  top: 2700px;
+  top: 3700px;
   left: -300px;
 }
 .fourth-dots {
