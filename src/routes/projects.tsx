@@ -6,6 +6,8 @@ import dots1 from "@/assets/Dots1.png";
 import dots2 from "@/assets/Dots2.png";
 import Blob from "@/components/Blob";
 import { projectPartners, projectPartners2, projectHighlights } from "@/data/projects";
+import {projectList} from "@/data/projects"
+import { ProjectCard } from "@/components";
 
 export const Route = createFileRoute("/projects")({
   component: RouteComponent,
@@ -140,6 +142,15 @@ function RouteComponent() {
               />
             )
           )}
+        </div>
+        <div className="projects-expanded-container">
+          {projectList.filter((project) => project.blurb) // Only show projects with blurbs (filters out empty entries)
+                    .map((project, index) => (
+                      <ProjectCard
+                      key={index}
+                      title={project.partner}
+                      blurb={project.blurb}
+                      />))}
         </div>
 
         <h1 className="projects-h1">Interested in supporting or volunteering with us?</h1>

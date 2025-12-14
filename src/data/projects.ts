@@ -110,8 +110,33 @@ export const projectList = [
       "This project was subject to strict confidentiality obligations, and as a result we are unable to share details.",
   },
   {
-    partner: "Communities Against Alcohol Harm",
+    partner: "Communities Against Alcohol Harm 1",
     blurb:
-      " -  An audio transcription app for hearings about legislating existing and new liquor stores\n - An image processing app for floorplans and alcohol areas of grocery stores",
+       "An audio transcription app for hearings about legislating liquor stores, to process long recordings and extract relevant information and an image processing app for floorplans and alcohol areas of grocery stores.",
   },
+  {
+    partner: "Communities Against Alcohol Harm 2",
+    blurb:
+       "We automated the liquor-licensing data collection process by monitoring and scraping council websites and emailing new information to CAAH.",
+  },
+  {
+    partner: "Genesis Youth Trust",
+    blurb:
+       "We created a dashboard for the Genesis Youth Trust to capture and report on the success of their recovery program. It contains visualisations that can be filtered and linked to clear outcomes.",
+  },
+  {
+    partner: "Grey Lynn 2030",
+    blurb:
+       "We processed local climate data into and interactive storytelling application, to help residents understand how climate change is impacting their community.",
+  },
+  {
+    partner: "Lighthouse Leaders",
+    blurb:
+       "We developed a survey and analytics platform for the SHINE Project to allow Lighthouse Leaders to track student growth through qualitative and quantitative insights.",
+  },
+  {
+    partner: "Neuroendocrine Cancer NZ",
+    blurb:
+       "This project was subject to strict confidentiality obligations, and as a result we are unable to share details.",
+  }
 ];
