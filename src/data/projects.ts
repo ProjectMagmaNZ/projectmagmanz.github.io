@@ -1,6 +1,9 @@
-import project1 from "../assets/projects-1.jpg";
-import project2 from "../assets/projects-2.jpg";
-import project3 from "../assets/projects-3.png";
+import project1 from "../assets/projects-1.jpg"
+import project2 from "../assets/projects-2.jpg"
+import project3 from "../assets/projects-3.png"
+import project4 from "../assets/projects-4.png"
+import project5 from "../assets/projects-5.png"
+import project6 from "../assets/projects-6.png"
 
 import araskills from "../assets/ClientLogos/Araskills.jpg";
 import bbbs from "../assets/ClientLogos/BBBS.jpg";
@@ -25,6 +28,24 @@ export const projectPartners = [
   {
     name: "Sem 2 Workshop 1",
     logoSrc: project3,
+    link: null,
+  },
+];
+
+export const projectPartners2 = [
+  {
+    name: "Project Example 1",
+    logoSrc: project4,
+    link: null,
+  },
+  {
+    name: "Project Example 2",
+    logoSrc: project5,
+    link: null,
+  },
+  {
+    name: "Project Example 3",
+    logoSrc: project6,
     link: null,
   },
 ];
