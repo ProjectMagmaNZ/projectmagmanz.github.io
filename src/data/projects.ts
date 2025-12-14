@@ -1,15 +1,15 @@
-import project1 from "../assets/projects-1.jpg"
-import project2 from "../assets/projects-2.jpg"
-import project3 from "../assets/projects-3.png"
+import project1 from "../assets/projects-1.jpg";
+import project2 from "../assets/projects-2.jpg";
+import project3 from "../assets/projects-3.png";
 
-import araskills from "../assets/ClientLogos/Araskills.jpg"
-import bbbs from "../assets/ClientLogos/BBBS.jpg"
-import bpi from "../assets/ClientLogos/BPI.jpg"
-import caah from "../assets/ClientLogos/CAAH.png"
-import genesis from "../assets/ClientLogos/Genesis.png"
-import greylynn2030 from "../assets/ClientLogos/GreyLynn2030.jpg"
-import lighthouseleaders from "../assets/ClientLogos/LighthouseLeaders.jpg"
-import neuroendocrinecancer from "../assets/ClientLogos/NeuroendocrineCancer.jpg"
+import araskills from "../assets/ClientLogos/Araskills.jpg";
+import bbbs from "../assets/ClientLogos/BBBS.jpg";
+import bpi from "../assets/ClientLogos/BPI.jpg";
+import caah from "../assets/ClientLogos/CAAH.png";
+import genesis from "../assets/ClientLogos/Genesis.png";
+import greylynn2030 from "../assets/ClientLogos/GreyLynn2030.jpg";
+import lighthouseleaders from "../assets/ClientLogos/LighthouseLeaders.jpg";
+import neuroendocrinecancer from "../assets/ClientLogos/NeuroendocrineCancer.jpg";
 
 export const projectPartners = [
   {
@@ -69,5 +69,28 @@ export const projectHighlights = [
     title: "Neuroendocrine Cancer",
     imageSrc: neuroendocrinecancer,
     blurb: "Software Tool",
+  },
+];
+
+export const projectList = [
+  {
+    partner: "Ara Education Trust",
+    blurb:
+      "We automated the reporting process so that future reports are intuitive, accurate, and time-saving.",
+  },
+  {
+    partner: "Big Brothers Big Sisters",
+    blurb:
+      "We created a mapping visualisation tool to allow BBBS to easily browse and see which demographics in Auckland require more assistance.",
+  },
+  {
+    partner: "Body Positive Incorporated",
+    blurb:
+      "This project was subject to strict confidentiality obligations, and as a result we are unable to share details.",
+  },
+  {
+    partner: "Communities Against Alcohol Harm",
+    blurb:
+      " -  An audio transcription app for hearings about legislating existing and new liquor stores\n - An image processing app for floorplans and alcohol areas of grocery stores",
   },
 ];
