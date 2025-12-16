@@ -55,7 +55,7 @@ const faqData = [
 
 const FAQAccordion: React.FC = () => {
   return (
-    <div style={{ maxWidth: '1200px', minWidth: '1200px', margin: '2rem auto' }}>
+    <div style={{ maxWidth: '1200px', width: '100%', margin: '2rem auto' }}>
       {faqData.map((item, index) => (
         <AccordionItem
           key={index}

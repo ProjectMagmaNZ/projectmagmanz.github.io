@@ -26,20 +26,22 @@ export default function Blob({
   style = {},
 }: BlobProps) {
   return (
-    <img
-      src={src}
-      aria-hidden="true"
-      className="blob"
-      style={{
-        top,
-        left,
-        right,
-        bottom,
-        width,
-        height,
-        transform: `rotate(${rotation}deg) scale(${scale})`,
-        ...style,
-      }}
-    />
+    <div style={{ overflow: "hidden", pointerEvents: "none", position: "fixed", top, left, right, bottom, width, height }}>
+      <img
+        src={src}
+        aria-hidden="true"
+        className="blob"
+        style={{
+          top,
+          left,
+          right,
+          bottom,
+          width,
+          height,
+          transform: `rotate(${rotation}deg) scale(${scale})`,
+          ...style,
+        }}
+      />
+    </div>
   );
 }

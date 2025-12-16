@@ -77,6 +77,11 @@ textarea{
     color: var(--colour-blue);
     padding-bottom: 1rem;
 }
+@media(max-width: 740px){
+    .email, .subject, .message{
+        width: 95%;
+    }
+}
 
 #contact-form{
     padding-bottom: 5rem;

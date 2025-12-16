@@ -9,12 +9,12 @@
   position: relative;
 }
 
-.page-container{
+.page-container {
   width: 100%;
 }
 
-.header{
-  background-color: #F4D39B;
+.header {
+  background-color: #f4d39b;
 }
 
 .page-title {
@@ -24,7 +24,6 @@
   padding-left: 50px;
   font-weight: 600;
 }
-
 
 .first-dots {
   z-index: 0;
@@ -57,4 +56,17 @@
   rotate: -30deg;
   left: 1600px;
   top: 3200px;
+}
+
+@media (max-width: 740px) {
+  .first-dots,
+  .second-dots,
+  .third-dots,
+  .fourth-dots {
+    display: none;
+  }
+
+  .exec-grid {
+    width: 100%;
+  }
 }

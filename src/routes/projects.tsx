@@ -55,7 +55,7 @@ function RouteComponent() {
 
       <section className="projects-section">
         <h1 className="projects-h1">
-          Over the years we've had the chance to be<br />
+          Over the years we've been
           building some amazing projects with our clients:
         </h1>
 
@@ -79,7 +79,7 @@ function RouteComponent() {
         </div>
 
         <h1 className="projects-h1">
-          ...And we've had the chance to <br /> work with some amazing people:
+          ...And we've had the chance to work with some amazing people:
         </h1>
 
         <center><p className="project-subheading-text">Some of our workshops...</p></center>
@@ -117,7 +117,7 @@ function RouteComponent() {
 
         <br></br>
 
-        <div className="projects-grid">
+        <div className="projects-example-grid">
           {Object.values(projectPartners2).map((partner) =>
             partner.link ? (
               <Link
@@ -138,11 +138,13 @@ function RouteComponent() {
                 src={partner.logoSrc}
                 alt={partner.name}
                 height={250}
-                className="partner-logo"
+                className="partner-logo example-image"
               />
             )
           )}
         </div>
+          <br></br><br></br><br></br>
+        <h1 className="projects-h1">A more in-depth look at some of our projects:</h1>
         <div className="projects-expanded-container">
           {projectList.filter((project) => project.blurb) // Only show projects with blurbs (filters out empty entries)
                     .map((project, index) => (
@@ -152,7 +154,7 @@ function RouteComponent() {
                       blurb={project.blurb}
                       />))}
         </div>
-
+        <br></br><br></br>
         <h1 className="projects-h1">Interested in supporting or volunteering with us?</h1>
 
         <button className="projects-cta">
