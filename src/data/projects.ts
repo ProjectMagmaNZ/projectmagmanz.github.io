@@ -39,13 +39,13 @@ export const projectPartners2 = [
     link: null,
   },
   {
-    name: "Project Example 2",
-    logoSrc: project5,
+    name: "Project Example 3",
+    logoSrc: project6,
     link: null,
   },
   {
-    name: "Project Example 3",
-    logoSrc: project6,
+    name: "Project Example 2",
+    logoSrc: project5,
     link: null,
   },
 ];

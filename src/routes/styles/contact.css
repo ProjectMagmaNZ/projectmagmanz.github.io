@@ -41,6 +41,11 @@
   font-weight: 600 !important;
 }
 
+@media(max-width:740px){
+  .contact, .us{
+  font-size: 4rem !important;
+}}
+
 .subtext{
   font-size: 1.5em !important;
   padding-bottom: 5rem !important;

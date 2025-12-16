@@ -10,18 +10,18 @@
 }
 
 .about-regular-text {
-    color: #23489E;
-    font-size: 1.25em;
-    line-height: 1.6;
-    text-align: justify;
-    margin: 0.5em 0;
+  color: #23489e;
+  font-size: 1.25em;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 0.5em 0;
 }
 
 .about-regular-TwoCols-text {
-    color: #23489E;
-    font-size: 1.25em;
-    line-height: 1.6;
-    text-align: justify;
+  color: #23489e;
+  font-size: 1.25em;
+  line-height: 1.6;
+  text-align: justify;
 }
 
 .about-section {
@@ -44,6 +44,8 @@
   width: 80%;
   border-radius: 2em;
 }
+
+
 
 @media (min-width: 740px) {
   .about-section {
@@ -72,4 +74,10 @@
   padding: 0 1rem;
   white-space: nowrap;
   margin-top: 1rem;
+}
+
+@media (max-width:740px){
+  .about-section{
+    padding: 0  1.5rem;
+  }
 }
